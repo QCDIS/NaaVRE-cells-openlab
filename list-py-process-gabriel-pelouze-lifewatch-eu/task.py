@@ -10,7 +10,7 @@ arg_parser.add_argument('--id', action='store', type=str, required=True, dest='i
 
 arg_parser.add_argument('--names', action='store', type=str, required=True, dest='names')
 
-arg_parser.add_argument('--param_something', action='store', type=str, required=True, dest='param_something')
+arg_parser.add_argument('--param_greeting_template', action='store', type=str, required=True, dest='param_greeting_template')
 
 args = arg_parser.parse_args()
 print(args)
@@ -19,7 +19,7 @@ id = args.id
 
 names = json.loads(args.names)
 
-param_something = args.param_something.replace('"','')
+param_greeting_template = args.param_greeting_template.replace('"','')
 
 
 greetings = []
