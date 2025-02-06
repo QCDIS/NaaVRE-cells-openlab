@@ -6,9 +6,9 @@ dependencies:
   - python>=3.8
   - nbconvert
   - awesome-slugify
-  - icoscp_core
   - matplotlib
   - pip:
     - icoscp
+    - icoscp_core
   - papermill
   - ipykernel
