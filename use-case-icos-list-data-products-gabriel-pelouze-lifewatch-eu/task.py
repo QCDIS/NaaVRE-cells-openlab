@@ -1,4 +1,3 @@
-import pandas as pd
 from icoscp.station import station
 import warnings
 
@@ -33,7 +32,7 @@ for station_id in stations_id_list:
         warnings.simplefilter("ignore")
         s = station.get(station_id)
         datasets = s.data()
-    if not isinstance(datasets, pd.DataFrame):
+    if isinstance(d, str) and (d == 'no data available'):
         print(f'No datasets for station {station_id}')
         continue
     datasets = datasets[datasets.specLabel == param_data_type]
