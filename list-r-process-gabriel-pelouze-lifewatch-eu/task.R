@@ -9,7 +9,7 @@ option_list = list(
 
 make_option(c("--id"), action="store", default=NA, type="character", help="my description"), 
 make_option(c("--names"), action="store", default=NA, type="character", help="my description"), 
-make_option(c("--param_something"), action="store", default=NA, type="character", help="my description")
+make_option(c("--param_greeting_template"), action="store", default=NA, type="character", help="my description")
 )
 
 
@@ -62,13 +62,13 @@ print(opt$names)
 names = var_serialization(opt$names)
 print("---------------------------------------------------------------------------------")
 
-print("Retrieving param_something")
-var = opt$param_something
+print("Retrieving param_greeting_template")
+var = opt$param_greeting_template
 print(var)
 var_len = length(var)
-print(paste("Variable param_something has length", var_len))
+print(paste("Variable param_greeting_template has length", var_len))
 
-param_something <- gsub("\"", "", opt$param_something)
+param_greeting_template <- gsub("\"", "", opt$param_greeting_template)
 
 
 print("Running the cell")
