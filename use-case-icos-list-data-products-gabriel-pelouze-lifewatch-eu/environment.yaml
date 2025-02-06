@@ -5,7 +5,6 @@ dependencies:
   - pip
   - python>=3.8
   - nbconvert
-  - pandas
   - pip:
     - icoscp
   - papermill
